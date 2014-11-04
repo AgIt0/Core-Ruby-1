@@ -9,3 +9,7 @@ Rake::TestTask.new do |t|
 end
 
 task default: %i(test rubocop)
+
+task :console do
+  sh 'irb -rubygems -I lib -I extra -r ./solution.rb'
+end
